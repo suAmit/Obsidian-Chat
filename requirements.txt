@@ -1,0 +1,9 @@
+chromadb==0.4.24
+sentence-transformers==2.5.1
+python-frontmatter==1.1.0
+fastapi==0.110.0
+uvicorn==0.27.1
+pydantic==2.6.3
+langchain
+rank_bm25
+requests
