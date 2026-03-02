@@ -5,6 +5,7 @@ A Retrieval-Augmented Generation (RAG) system that connects your local Obsidian 
 ---
 
 ## 📂 Project Structure
+
 ```text
 Local-RAG/
 ├── obsidian plugin/    # Frontend: Obsidian JS Plugin
@@ -28,7 +29,7 @@ Local-RAG/
 ## 🛠️ Step 1: Backend Setup (Python 3.11.2)
 
 1. **Environment Setup**:
-Navigate to the root directory and set up your environment using `pyenv`:
+   Navigate to the root directory and set up your environment using `pyenv`:
 
 ```bash
 pyenv local 3.11.2
@@ -45,7 +46,7 @@ pip install -r requirements.txt
 ```
 
 3. **Vault Configuration**:
-Open `server/config.py` and ensure the `VAULT_PATH` points to your absolute vault location:
+   Open `server/config.py` and ensure the `VAULT_PATH` points to your absolute vault location:
 
 ```python
 # Example:
@@ -110,18 +111,16 @@ python main.py
 ```
 
 2. **Sync Your Notes**:
-In the Obsidian Sidebar, click the **Sync** button. This will parse your markdown files and store them in `chroma_db/`.
+   In the Obsidian Sidebar, click the **Sync** button. This will parse your markdown files and store them in `chroma_db/`.
 3. **Chat**:
-Type your questions in the sidebar. The system will retrieve relevant notes and answer using the local LLM.
+   Type your questions in the sidebar. The system will retrieve relevant notes and answer using the local LLM.
 4. **Shutdown**:
-Press `Ctrl+C` in your terminal to stop the backend when finished.
+   Press `Ctrl+C` in your terminal to stop the backend when finished.
 
 ---
 
 ## ⚠️ Troubleshooting
 
-* **Hidden Folders**: On Arch Linux, the `.obsidian` folder is hidden by default. Always press `Ctrl + H` in your file manager to find it.
-* **Missing Documents**: If you add new notes, remember to hit **Sync** in the sidebar.
-* **Connection Error**: Ensure `main.py` is running in a terminal before trying to chat in Obsidian.
-
-```
+- **Hidden Folders**: On Arch Linux, the `.obsidian` folder is hidden by default. Always press `Ctrl + H` in your file manager to find it.
+- **Missing Documents**: If you add new notes, remember to hit **Sync** in the sidebar.
+- **Connection Error**: Ensure `main.py` is running in a terminal before trying to chat in Obsidian.
