@@ -1,10 +1,10 @@
 {
-  "id": "my-custom-plugin",
-  "name": "My Custom Plugin",
+  "id": "Obsidian-Chat",
+  "name": "Obsidian Chat",
   "version": "1.0.0",
   "minAppVersion": "1.0.0",
-  "description": "A description of what your plugin does.",
-  "author": "Your Name",
-  "authorUrl": "https://yourwebsite.com",
+  "description": "Chat with your note with RAG.",
+  "author": "Amit",
+  "authorUrl": "https://github.com/suAmit",
   "isDesktopOnly": false
 }
