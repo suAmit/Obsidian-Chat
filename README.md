@@ -8,7 +8,7 @@ A Retrieval-Augmented Generation (RAG) system that connects your local Obsidian 
 
 ```text
 Local-RAG/
-├── obsidian plugin/    # Frontend: Obsidian JS Plugin
+├── obsidian-plugin/    # Frontend: Obsidian JS Plugin
 │   ├── main.js
 │   ├── manifest.json
 │   └── styles.css
@@ -84,7 +84,7 @@ To make the "Second Brain" sidebar appear in Obsidian, you must move the plugin 
 ### 2. Copy the Plugin Files
 
 1. Open your **Project Folder** (`Local-RAG`) in a second window.
-2. Open the folder named `obsidian plugin`.
+2. Open the folder named `obsidian-plugin`.
 3. Select these **3 files**: `main.js`, `manifest.json`, `styles.css`.
 4. **Copy and Paste** these 3 files into the `obsidian-chat` folder you created in your Vault.
 
