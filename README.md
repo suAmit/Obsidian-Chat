@@ -2,8 +2,6 @@
 
 A Retrieval-Augmented Generation (RAG) system that connects your local Obsidian Vault to a lightweight LLM. Built with Python (FastAPI + ChromaDB) and a custom JavaScript Sidebar for Obsidian.
 
----
-
 ## 📂 Project Structure
 
 ```text
@@ -23,8 +21,6 @@ Local-RAG/
 └── requirements.txt    # Python Dependencies
 
 ```
-
----
 
 ## 🛠️ Step 1: Backend Setup (Python 3.11.2)
 
@@ -54,8 +50,6 @@ VAULT_PATH = "/home/user/Documents/MyVault"
 
 ```
 
----
-
 ## 🤖 Step 2: AI Model Setup (Ollama)
 
 This project uses **Ollama** to run models locally on your CPU/GPU.
@@ -67,8 +61,6 @@ This project uses **Ollama** to run models locally on your CPU/GPU.
 ollama pull llama3.2:1b
 
 ```
-
----
 
 ## 🔌 Step 3: Obsidian Plugin Installation (Visual Guide)
 
@@ -96,8 +88,6 @@ To make the "Second Brain" sidebar appear in Obsidian, you must move the plugin 
 4. Click the **Refresh** button next to "Installed plugins".
 5. Find **Obsidian Chat** in the list and click the **Toggle Switch** to turn it ON.
 
----
-
 ## 🚀 Step 4: Usage Workflow
 
 Since this is a manual setup, follow these steps to start your "Obsidian Chat":
@@ -116,8 +106,6 @@ python main.py
    Type your questions in the sidebar. The system will retrieve relevant notes and answer using the local LLM.
 4. **Shutdown**:
    Press `Ctrl+C` in your terminal to stop the backend when finished.
-
----
 
 ## ⚠️ Troubleshooting
 
