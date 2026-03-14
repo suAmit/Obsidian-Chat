@@ -1,12 +1,12 @@
-# 🧠 Obsidian Chat (Local RAG MVP)
+# Obsidian 2nd Brain
 
 A Retrieval-Augmented Generation (RAG) system that connects your local Obsidian Vault to a lightweight LLM. Built with Python (FastAPI + ChromaDB) and a custom JavaScript Sidebar for Obsidian.
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
-Local-RAG/
-├── obsidian-plugin/    # Frontend: Obsidian JS Plugin
+Obsidian-2nd-Brain/
+├── obsidian-plugin/    # Frontend: Obsidian Plugin
 │   ├── main.js
 │   ├── manifest.json
 │   └── styles.css
@@ -19,10 +19,9 @@ Local-RAG/
 ├── main.py             # FastAPI Entry Point
 ├── README.md           # This guide
 └── requirements.txt    # Python Dependencies
-
 ```
 
-## 🛠️ Step 1: Backend Setup (Python 3.11.2)
+## Step 1: Backend Setup
 
 1. **Environment Setup**:
    Navigate to the root directory and set up your environment using `pyenv`:
@@ -31,26 +30,22 @@ Local-RAG/
 pyenv local 3.11.2
 python -m venv venv
 source venv/bin/activate
-
 ```
 
 2. **Install Dependencies**:
 
 ```bash
 pip install -r requirements.txt
-
 ```
 
 3. **Vault Configuration**:
    Open `server/config.py` and ensure the `VAULT_PATH` points to your absolute vault location:
 
 ```python
-# Example:
 VAULT_PATH = "/home/user/Documents/MyVault"
-
 ```
 
-## 🤖 Step 2: AI Model Setup (Ollama)
+## Step 2: AI Model Setup (Ollama)
 
 This project uses **Ollama** to run models locally on your CPU/GPU.
 
@@ -59,19 +54,18 @@ This project uses **Ollama** to run models locally on your CPU/GPU.
 
 ```bash
 ollama pull llama3.2:1b
-
 ```
 
-## 🔌 Step 3: Obsidian Plugin Installation (Visual Guide)
+## Step 3: Obsidian Plugin Installation
 
 To make the "Second Brain" sidebar appear in Obsidian, you must move the plugin files into your Vault's internal configuration folder.
 
 ### 1. Prepare the Destination Folder
 
-1. Open your **Obsidian Vault** folder in your File Manager (Thunar, Dolphin, etc.).
-2. Show hidden files (Press **`Ctrl + H`**). You should now see a folder named `.obsidian`.
+1. Open your **Obsidian Vault** folder in your File Manager.
+2. Show hidden files. You should now see a folder named `.obsidian`.
 3. Go into `.obsidian` > `plugins`.
-4. Create a new folder here named `obsidian-chat`.
+4. Create a new folder here named `Obsidian-2nd-Brain`.
 
 ### 2. Copy the Plugin Files
 
@@ -88,7 +82,7 @@ To make the "Second Brain" sidebar appear in Obsidian, you must move the plugin 
 4. Click the **Refresh** button next to "Installed plugins".
 5. Find **Obsidian Chat** in the list and click the **Toggle Switch** to turn it ON.
 
-## 🚀 Step 4: Usage Workflow
+## Step 4: Usage Workflow
 
 Since this is a manual setup, follow these steps to start your "Obsidian Chat":
 
@@ -107,8 +101,7 @@ python main.py
 4. **Shutdown**:
    Press `Ctrl+C` in your terminal to stop the backend when finished.
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 
-- **Hidden Folders**: On Arch Linux, the `.obsidian` folder is hidden by default. Always press `Ctrl + H` in your file manager to find it.
 - **Missing Documents**: If you add new notes, remember to hit **Sync** in the sidebar.
 - **Connection Error**: Ensure `main.py` is running in a terminal before trying to chat in Obsidian.
